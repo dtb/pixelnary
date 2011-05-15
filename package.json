@@ -1,0 +1,10 @@
+{
+	"name": "pixelnary",
+	"version": "0.0.1",
+	"main": "app.js",
+	"dependencies": {
+		"express": "2.3.x",
+		"hbs": "0.0.7",
+		"sass": "0.5.x"
+	}
+}
