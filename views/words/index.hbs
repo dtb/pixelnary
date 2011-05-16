@@ -1,0 +1,19 @@
+<h2>Words</h2>
+<ul>
+	{{#words}}
+	<li>
+		{{word}}
+	</li>
+	{{/words}}
+</ul>
+{{^words}}
+	<p>
+		<em>No words</em>
+	</p>
+{{/words}}
+
+<h3>Add a word</h3>
+<form action="/words" method="post">
+	<input type="text" name="word">
+	<button type="submit">Add word</button>
+</form>
