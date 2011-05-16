@@ -1,0 +1,9 @@
+#board button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  box-shadow: 1px 1px 3px #000;}
+#board button.lit {
+  background-color: #079;}
+#board button.not-lit {
+  background-color: #999;}

@@ -1,0 +1,17 @@
+<h2>{{title}}</h2>
+<table id="board">
+	{{#board}}
+		{{#rows}}
+			<tr>
+				{{#cells}}
+				<td>
+					<button id="square-{{x}}-{{y}}" class="{{#lit}}lit{{/lit}}{{^lit}}not-lit{{/lit}}">
+						{{#lit}}lit{{/lit}}
+						{{^lit}}nlt{{/lit}}
+					</button>
+				</td>
+				{{/cells}}
+			</tr>
+		{{/rows}}
+	{{/board}}
+</table>

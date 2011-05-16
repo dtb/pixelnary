@@ -7,7 +7,8 @@ require.paths.push('./local_modules');
  */
 
 var express = require('express')
-	, access = require('access.js');
+	, access = require('access.js')
+	, sass = require('sass');
 
 var app = module.exports = express.createServer();
 
@@ -52,6 +53,26 @@ app.post('/words', function(req, res){
 		if(err) throw err;
 		
 		res.redirect('/words');
+	});
+});
+
+var getBoard = function() {
+	var board = {'rows': []};
+	for(var y = 0; y < 8; y++) {
+		board['rows'].push({'cells': []});
+		for(var x = 0; x < 8; x++) {
+			board['rows'][y]['cells'].push({'lit': Math.random() <= .5 , x: x, y: y });
+		}
+	}
+	return board;
+};
+
+app.get('/games/:id', function(req, res){
+	//pretend we pull a game out of somewhere here
+	console.log(getBoard());
+	res.render('games/show', {
+		'title': 'That one game with the things',
+		'board': getBoard()
 	});
 });
 
