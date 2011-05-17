@@ -1,5 +1,3 @@
-require.paths.push('/usr/local/lib/node_modules');
-require.paths.push('./node_modules');
 require.paths.push('./local_modules');
 
 /**
@@ -7,7 +5,7 @@ require.paths.push('./local_modules');
  */
 
 var express = require('express')
-	, access = require('access.js')
+	, access = require('access')
 	, sass = require('sass');
 
 var app = module.exports = express.createServer();
