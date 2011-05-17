@@ -1,17 +1,17 @@
 <h2>{{title}}</h2>
 <table id="board">
-	{{#board}}
-		{{#rows}}
+	{{#each board}}
 			<tr>
-				{{#cells}}
+			  {{#each this}}
 				<td>
-					<button id="square-{{x}}-{{y}}" class="{{#lit}}lit{{/lit}}{{^lit}}not-lit{{/lit}}">
-						{{#lit}}lit{{/lit}}
-						{{^lit}}nlt{{/lit}}
-					</button>
+				  {{#this}}
+				    <button id="square-{{x}}-{{y}}" class="{{#lit}}lit{{/lit}}{{^lit}}not-lit{{/lit}}">
+				      {{#lit}}lit{{/lit}}
+				      {{^lit}}not lit{{/lit}}
+				    </button>
+				  {{/this}}
 				</td>
-				{{/cells}}
+				{{/each}}
 			</tr>
-		{{/rows}}
-	{{/board}}
+	{{/each}}
 </table>

@@ -55,11 +55,11 @@ app.post('/words', function(req, res){
 });
 
 var getBoard = function() {
-	var board = {'rows': []};
+	var board = [];
 	for(var y = 0; y < 8; y++) {
-		board['rows'].push({'cells': []});
+		board.push([]);
 		for(var x = 0; x < 8; x++) {
-			board['rows'][y]['cells'].push({'lit': Math.random() <= .5 , x: x, y: y });
+			board[y].push({'lit': Math.random() <= .5 , x: x, y: y });
 		}
 	}
 	return board;
@@ -67,7 +67,6 @@ var getBoard = function() {
 
 app.get('/games/:id', function(req, res){
 	//pretend we pull a game out of somewhere here
-	console.log(getBoard());
 	res.render('games/show', {
 		'title': 'That one game with the things',
 		'board': getBoard()
