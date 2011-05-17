@@ -1,0 +1,6 @@
+[submodule "node_modules/handlebars"]
+	path = node_modules/handlebars
+	url = https://github.com/mmoulton/handlebars.js
+[submodule "node_modules/hbs"]
+	path = node_modules/hbs
+	url = https://github.com/dtb/hbs.git
